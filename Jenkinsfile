@@ -3,9 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Difference between echo and sh"
-                sh 'echo using shell within Jenkinsfile'
-                echo 'not using shell in the Jenkinsfile'
+                echo 'This pipeline script triggered via GitHub webhook'
+                sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
             }
         }
     }
